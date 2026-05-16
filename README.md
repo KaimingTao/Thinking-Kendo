@@ -1,28 +1,14 @@
 # Think Kendo
 
-<img src="./logo.png" width="100" height="100">
+理解の剣
+
+Understand how to use sword
 
 
-- [Main web site](https://kaimingtao.github.io/Thinking-Kendo/)
-
-An ongoing project
-
-## Purpose of this project
-
-Kendo knowledge are stored in people's minds, books, online videos, blogs, etc. When we face a question, we may struggle to find the answer.
-
-This project is trying to make answer-searching a bit easier.
-
-After we know the answer, the next step is to understand them. One day we may find a better one.
+![Main](./main.jpg)
 
 
-## %comments%
 
-- All things can be seen as communication
-
-## How to use the web note
-
-- [ ] TODO
 
 ## Contributor
 
