@@ -1,0 +1,91 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="Page-1" id="Ah9tYDqy2kfxLdAQ0AGv">
+    <mxGraphModel dx="1379" dy="843" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3JA_vObvmX7TFgS4514h-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="yYNs28YQ29dmMu1R2xep-1" target="yYNs28YQ29dmMu1R2xep-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3JA_vObvmX7TFgS4514h-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="yYNs28YQ29dmMu1R2xep-1" target="3JA_vObvmX7TFgS4514h-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3JA_vObvmX7TFgS4514h-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="yYNs28YQ29dmMu1R2xep-1" target="3JA_vObvmX7TFgS4514h-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3JA_vObvmX7TFgS4514h-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="yYNs28YQ29dmMu1R2xep-1" target="3JA_vObvmX7TFgS4514h-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yYNs28YQ29dmMu1R2xep-1" value="&lt;div&gt;素振り&lt;/div&gt;&lt;div&gt;Suburi&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yYNs28YQ29dmMu1R2xep-2" value="Grip" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yYNs28YQ29dmMu1R2xep-4" value="刃筋&lt;div&gt;Ha Suji&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="437.5" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yYNs28YQ29dmMu1R2xep-5" value="Move torso" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="240" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yYNs28YQ29dmMu1R2xep-7" value="構え&lt;div&gt;Kamae&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3JA_vObvmX7TFgS4514h-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="yYNs28YQ29dmMu1R2xep-9" target="3JA_vObvmX7TFgS4514h-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yYNs28YQ29dmMu1R2xep-9" value="Ken" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="437.5" y="500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yYNs28YQ29dmMu1R2xep-10" value="&lt;div&gt;物打ち&lt;/div&gt;Monouchi" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="650" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yYNs28YQ29dmMu1R2xep-11" value="&lt;div&gt;打突部位&lt;/div&gt;Target" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="650" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3JA_vObvmX7TFgS4514h-1" value="Body work" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3JA_vObvmX7TFgS4514h-3" value="Strike (cut)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="437.5" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3JA_vObvmX7TFgS4514h-4" value="Foot position" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3JA_vObvmX7TFgS4514h-5" value="Body posture" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3JA_vObvmX7TFgS4514h-6" value="Shinai position" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3JA_vObvmX7TFgS4514h-7" value="Mind (Ki)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3JA_vObvmX7TFgS4514h-8" value="Push left leg" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3JA_vObvmX7TFgS4514h-9" value="Relax shoulders" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3JA_vObvmX7TFgS4514h-10" value="Use arm and elbow&lt;div&gt;to swing&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="437.5" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3JA_vObvmX7TFgS4514h-11" value="Right leg catchup&lt;div&gt;(&lt;div&gt;冴え&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Sae&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="437.5" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3JA_vObvmX7TFgS4514h-12" value="手の内&lt;div&gt;Te no Uchi&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="437.5" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3JA_vObvmX7TFgS4514h-13" value="刃筋&lt;div&gt;Ha Suji&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3JA_vObvmX7TFgS4514h-19" value="気合い&lt;div&gt;Kiai&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="437.5" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3JA_vObvmX7TFgS4514h-20" value="残心" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
