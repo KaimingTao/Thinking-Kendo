@@ -99,7 +99,7 @@ def existing_ids() -> tuple[dict[str, int], int]:
 
 
 def write_csv() -> int:
-    """Scan project Markdown files and save their source data to notes.csv."""
+    """Refresh notes.csv from current files, dropping rows for missing paths."""
     rows = []
     ids_by_path, maximum_id = existing_ids()
     markdown_files = (
@@ -133,6 +133,8 @@ def write_csv() -> int:
     with CSV_OUTPUT.open("w", encoding="utf-8", newline="") as csv_file:
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
         writer.writeheader()
+        # Rewriting the complete file intentionally removes entries whose
+        # relative paths are no longer present in the project.
         writer.writerows(rows)
     print(f"Wrote {len(rows)} Markdown files to {CSV_OUTPUT}")
     return len(rows)

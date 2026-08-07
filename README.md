@@ -4,7 +4,7 @@
 
 Understand how to use sword
 
-![Main](./main.jpg)
+https://kaimingtao.github.io/Thinking-Kendo/
 
 Kendo is Zazen
 
