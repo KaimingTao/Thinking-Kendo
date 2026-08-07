@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+# Keep generated note exports in sync with the Markdown source before commits.
+set -eu
+
+project_root="$(git rev-parse --show-toplevel)"
+cd "$project_root"
+
+uv run python export_notes.py
+git add -- notes.csv notes.json

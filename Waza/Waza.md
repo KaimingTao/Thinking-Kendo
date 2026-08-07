@@ -61,11 +61,6 @@ From Omote or from Ura
 
 
 
-## Hiki 引き技
-
-- HIKI-Men
-- HIKI-Kote
-- HIKI-Do
 
 
 
@@ -118,5 +113,3 @@ From Omote or from Ura
 - Ai-Kote-Men
 - Do-uchiotoshi-Men
 - Men-Uchiotoshi-Men
-
-
