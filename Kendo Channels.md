@@ -1,0 +1,6 @@
+- 月刊剣道日本 付録動画
+    - https://www.youtube.com/@月刊剣道日本付録動画
+- The way of the Namiashi Kendo, the Samurai Methods
+    - https://www.youtube.com/@kendo_namiashi_dokkodo
+- 梶谷彪雅-剣道KENDO-
+    - https://www.youtube.com/@-kendo-9265
