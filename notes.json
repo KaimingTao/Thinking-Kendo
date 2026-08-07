@@ -235,8 +235,8 @@
     "id": 30,
     "relative_path": "日本刀/日本刀.md",
     "filename": "日本刀",
-    "content": "",
-    "html_content": "",
+    "content": "## 日本刀の名前\n\n鎺・鈨・はばき\nnote: you cannot find the character in Mac's input keyboard tool",
+    "html_content": "<h2>日本刀の名前</h2>\n<p>鎺・鈨・はばき<br />\nnote: you cannot find the character in Mac's input keyboard tool</p>",
     "update_date": "2026-08-06T20:04:33-07:00"
   },
   {
@@ -261,6 +261,6 @@
     "filename": "引き技",
     "content": "## 引き技\n\nEnglish: Hiki waza\n\n- HIKI-Men\n- HIKI-Kote\n- HIKI-Do",
     "html_content": "<h2>引き技</h2>\n<p>English: Hiki waza</p>\n<ul>\n<li>HIKI-Men</li>\n<li>HIKI-Kote</li>\n<li>HIKI-Do</li>\n</ul>",
-    "update_date": "2026-08-06T20:13:57-07:00"
+    "update_date": "2026-08-06T20:15:15-07:00"
   }
 ]
