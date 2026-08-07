@@ -85,7 +85,7 @@
     "filename": "Waza",
     "content": "## Waza terms\n\n- 表 Omote, mototachi no hidari\n- 里 Ura, mototachi no migi\n- 右 Migi, right\n- 左 Hidari, left\n- 身構え Migamae\n- 気構え kigamae\n\n\n\n\n## Ippon Uchi no Waza  一本打ちの技\n\n- Men\n- Kote\n- Do\n- Tsuki\n\n\n\n\n## Shikake waza 仕掛け技\n\n\n\n\n## Renzoku waza 二・三段の, 連続技\n\n- Men-Men\n- Kote-Men 小手・面\n- Kote-Do\n- Do-Men\n- Men-Do 面・胴\n- Kote-Men-Men 小手・面・面\n- Kote-Men-Do 小手・面・胴\n- Kote-Men-Do-Men\n- 突き・面\n\nMen can be both SHOMEN or SAYU-MEN\n\n\n\n\n## Harai 払い技\n\n\n- Harai-Men\n- Harai-Kote\n\nVariations\n\n- Harai(age) 払い\n- Osae　押さえ\n- Uchiotoshi　打ち落とし\n- Hari　張り\n- Maki　巻き\n\nFrom Omote or from Ura\n\n\n\n\n\n\n\n\n## Oji waza 応じ技\n\n\n\n## Nuki waza 抜き技\n\n- Men-Nuki-Do\n- Men-Nuki-Hidari-Do\n- Men-Nuki-Kote\n- Men-Nuki-Men\n- Kote-Nuki-Men\n\n\n\n\n## Suriage 擦り上げ技\n\n- Men-Suriage-Men (OMOTE, URA)\n- Kote-Suriage-Men (OMOTE, URA)\n- Kote-Suriage-Kote\n- Men-Suriage-Do\n\n\n\n\n## Debana 出鼻\n\n- Debana-Men\n- Debana-Kote\n\n\n\n\n## Kaeshi 返し技\n\n- Men-Kaeshi-Do\n- Kote-Kaeshi-Men\n- Men-Kaeshi-Men\n- Do-Kaeshi-Men\n\n\n\n\n## Uchiotoshi 打ち落とし\n\n- Ai-Kote-Men\n- Do-uchiotoshi-Men\n- Men-Uchiotoshi-Men\n",
     "html_content": "<h2>Waza terms</h2>\n<ul>\n<li>表 Omote, mototachi no hidari</li>\n<li>里 Ura, mototachi no migi</li>\n<li>右 Migi, right</li>\n<li>左 Hidari, left</li>\n<li>身構え Migamae</li>\n<li>気構え kigamae</li>\n</ul>\n<h2>Ippon Uchi no Waza  一本打ちの技</h2>\n<ul>\n<li>Men</li>\n<li>Kote</li>\n<li>Do</li>\n<li>Tsuki</li>\n</ul>\n<h2>Shikake waza 仕掛け技</h2>\n<h2>Renzoku waza 二・三段の, 連続技</h2>\n<ul>\n<li>Men-Men</li>\n<li>Kote-Men 小手・面</li>\n<li>Kote-Do</li>\n<li>Do-Men</li>\n<li>Men-Do 面・胴</li>\n<li>Kote-Men-Men 小手・面・面</li>\n<li>Kote-Men-Do 小手・面・胴</li>\n<li>Kote-Men-Do-Men</li>\n<li>突き・面</li>\n</ul>\n<p>Men can be both SHOMEN or SAYU-MEN</p>\n<h2>Harai 払い技</h2>\n<ul>\n<li>Harai-Men</li>\n<li>Harai-Kote</li>\n</ul>\n<p>Variations</p>\n<ul>\n<li>Harai(age) 払い</li>\n<li>Osae　押さえ</li>\n<li>Uchiotoshi　打ち落とし</li>\n<li>Hari　張り</li>\n<li>Maki　巻き</li>\n</ul>\n<p>From Omote or from Ura</p>\n<h2>Oji waza 応じ技</h2>\n<h2>Nuki waza 抜き技</h2>\n<ul>\n<li>Men-Nuki-Do</li>\n<li>Men-Nuki-Hidari-Do</li>\n<li>Men-Nuki-Kote</li>\n<li>Men-Nuki-Men</li>\n<li>Kote-Nuki-Men</li>\n</ul>\n<h2>Suriage 擦り上げ技</h2>\n<ul>\n<li>Men-Suriage-Men (OMOTE, URA)</li>\n<li>Kote-Suriage-Men (OMOTE, URA)</li>\n<li>Kote-Suriage-Kote</li>\n<li>Men-Suriage-Do</li>\n</ul>\n<h2>Debana 出鼻</h2>\n<ul>\n<li>Debana-Men</li>\n<li>Debana-Kote</li>\n</ul>\n<h2>Kaeshi 返し技</h2>\n<ul>\n<li>Men-Kaeshi-Do</li>\n<li>Kote-Kaeshi-Men</li>\n<li>Men-Kaeshi-Men</li>\n<li>Do-Kaeshi-Men</li>\n</ul>\n<h2>Uchiotoshi 打ち落とし</h2>\n<ul>\n<li>Ai-Kote-Men</li>\n<li>Do-uchiotoshi-Men</li>\n<li>Men-Uchiotoshi-Men</li>\n</ul>",
-    "update_date": "2026-08-06T20:04:33-07:00"
+    "update_date": "2026-08-06T20:13:57-07:00"
   },
   {
     "id": 37,
@@ -259,8 +259,8 @@
     "id": 50,
     "relative_path": "Waza/引き技.md",
     "filename": "引き技",
-    "content": "## 引き技\n\nEnglish: Hiki waza\n\n- HIKI-Men\n- HIKI-Kote\n- HIKI-Do\n",
+    "content": "## 引き技\n\nEnglish: Hiki waza\n\n- HIKI-Men\n- HIKI-Kote\n- HIKI-Do",
     "html_content": "<h2>引き技</h2>\n<p>English: Hiki waza</p>\n<ul>\n<li>HIKI-Men</li>\n<li>HIKI-Kote</li>\n<li>HIKI-Do</li>\n</ul>",
-    "update_date": "2026-08-06T20:12:38.887365-07:00"
+    "update_date": "2026-08-06T20:13:57-07:00"
   }
 ]
