@@ -10,7 +10,7 @@
         font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
           "Segoe UI", sans-serif;
         background: #f1f3f5;
-        color: #20252b;
+        color: #243b53;
       }
 
       * { box-sizing: border-box; }
@@ -24,6 +24,8 @@
       }
 
       h1 { margin: 0 0 1rem; font-size: clamp(1.2rem, 2.5vw, 1.65rem); }
+      h1 a { color: inherit; text-decoration: none; }
+      h1 a:hover { text-decoration: underline; }
 
       #search {
         width: 100%;
@@ -49,12 +51,13 @@
       }
 
       .card {
+        position: relative;
         display: inline-block;
         min-width: 0;
         width: 100%;
         margin: 0 0 1rem;
         break-inside: avoid;
-        padding: 1.1rem;
+        padding: 2.25rem 1.1rem 1.1rem;
         border: 1px solid #d9dde1;
         border-radius: 0.75rem;
         background: #fff;
@@ -86,6 +89,22 @@
       }
       .card-content a:hover { color: #73351d; }
 
+      .card-id {
+        position: absolute;
+        right: 1.1rem;
+        top: 0.7rem;
+        padding: 0.2rem 0.45rem;
+        border-radius: 999px;
+        background: #e7c8d8;
+        color: #75304f;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .card-id:hover { background: #d9aec4; color: #5d1f3c; text-decoration: underline; }
+
+      #cards.single-card { column-count: 1; }
+
       #sentinel { height: 1px; }
 
       @media (max-width: 900px) {
@@ -100,7 +119,7 @@
   </head>
   <body>
     <main>
-      <h1>Thinking-Kendo</h1>
+      <h1><a href="./">Thinking-Kendo</a></h1>
       <input id="search" type="search" placeholder="Search all notes…" autocomplete="off" />
       <p id="status" aria-live="polite">Loading notes…</p>
       <section id="cards" aria-label="Notes"></section>
@@ -138,14 +157,26 @@
       function makeCard(note) {
         const card = document.createElement('article');
         card.className = 'card';
+        card.id = String(note.id);
         card.setAttribute('aria-label', note.filename);
         card.style.backgroundColor = CARD_COLORS[Math.floor(Math.random() * CARD_COLORS.length)];
         const content = document.createElement('div');
         content.className = 'card-content';
         // This is generated locally from the Markdown source by export_notes.py.
         content.innerHTML = note.html_content;
+        const noteId = document.createElement('a');
+        noteId.className = 'card-id';
+        noteId.href = `./#${note.id}`;
+        noteId.textContent = `#${note.id}`;
+        noteId.setAttribute('aria-label', `View only note ${note.id}`);
         card.append(content);
+        card.append(noteId);
         return card;
+      }
+
+      function hashNoteId() {
+        const match = location.hash.match(/^#(\d+)$/);
+        return match ? Number(match[1]) : null;
       }
 
       function render(reset = false) {
@@ -166,14 +197,19 @@
 
       function filterNotes() {
         const query = search.value.trim().toLocaleLowerCase();
-        results = shuffled(notes.filter((note) =>
-          note.content.trim() &&
-          Object.values(note).some((value) => String(value).toLocaleLowerCase().includes(query))
-        ));
+        const contentNotes = notes.filter((note) => note.content.trim());
+        const noteId = hashNoteId();
+        results = noteId === null
+          ? shuffled(contentNotes.filter((note) =>
+            Object.values(note).some((value) => String(value).toLocaleLowerCase().includes(query))
+          ))
+          : contentNotes.filter((note) => note.id === noteId);
+        cards.classList.toggle('single-card', noteId !== null && results.length === 1);
         render(true);
       }
 
       search.addEventListener('input', filterNotes);
+      window.addEventListener('hashchange', filterNotes);
 
       new IntersectionObserver(([entry]) => {
         if (entry.isIntersecting && visibleCount < results.length) {
@@ -189,8 +225,7 @@
         })
         .then((data) => {
           notes = Array.isArray(data) ? data : [];
-          results = shuffled(notes.filter((note) => note.content.trim()));
-          render(true);
+          filterNotes();
         })
         .catch((error) => {
           status.textContent = `${error.message}. Serve this folder with a local web server.`;
