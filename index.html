@@ -109,6 +109,39 @@
       }
       .card-content a:hover { color: #73351d; }
 
+      .card-title {
+        margin: 0 0 0.7rem;
+        color: #243b53;
+        font-size: 1.15rem;
+        line-height: 1.3;
+      }
+      .card-title a { color: inherit; text-decoration: none; }
+      .card-title a:hover { color: #75304f; text-decoration: underline; }
+      .card-preview {
+        max-height: 12rem;
+        overflow: hidden;
+        color: #3e5065;
+        line-height: 1.65;
+        -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent);
+        mask-image: linear-gradient(to bottom, #000 82%, transparent);
+      }
+      .card-preview h1 { font-size: 1.2rem; }
+      .card-preview h2 { font-size: 1.05rem; }
+      .card-preview h3 { font-size: 1rem; }
+      .card-preview h1,
+      .card-preview h2,
+      .card-preview h3 { line-height: 1.35; }
+      .card-preview li { margin: 0.25rem 0; }
+      .read-note {
+        display: inline-block;
+        margin-top: 0.85rem;
+        color: #75304f;
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .read-note:hover { color: #5d1f3c; text-decoration: underline; }
+
       .card-id {
         position: absolute;
         right: 1.1rem;
@@ -122,6 +155,7 @@
         text-decoration: none;
       }
       .card-id:hover { background: #d9aec4; color: #5d1f3c; text-decoration: underline; }
+      .card-id-icon { margin-right: 0.15rem; }
 
       .card-date {
         position: absolute;
@@ -131,7 +165,40 @@
         font-size: 0.72rem;
       }
 
-      #cards.single-card { column-count: 1; }
+      #cards.single-card {
+        max-width: 48rem;
+        margin: 0 auto;
+        column-count: 1;
+      }
+      #cards.single-card .card {
+        background: #fff !important;
+        box-shadow: 0 2px 8px rgb(36 59 83 / 10%);
+      }
+      #cards.single-card .card-content {
+        font-size: 1.08rem;
+        line-height: 1.8;
+      }
+      #cards.single-card .card-content h1,
+      #cards.single-card .card-content h2,
+      #cards.single-card .card-content h3 {
+        color: #243b53;
+        line-height: 1.3;
+      }
+      #cards.single-card .card-content > :first-child { margin-top: 0; }
+      #cards.single-card .card-content h1 { font-size: 1.8rem; margin: 0 0 1.2rem; }
+      #cards.single-card .card-content h2 { font-size: 1.4rem; margin: 2.2rem 0 0.8rem; }
+      #cards.single-card .card-content h3 { font-size: 1.15rem; margin: 1.7rem 0 0.6rem; }
+      #cards.single-card .card-content p { margin: 0 0 1.1rem; }
+      #cards.single-card .card-content ul,
+      #cards.single-card .card-content ol { margin: 0 0 1.1rem; padding-left: 1.4rem; }
+      #cards.single-card .card-content li { margin: 0.4rem 0; }
+      #cards.single-card .card-content blockquote {
+        margin: 1.3rem 0;
+        padding: 0.2rem 1rem;
+        border-left: 0.25rem solid #c8b3d7;
+        color: #4b5d73;
+      }
+      #cards.single-card .card-content table { display: block; max-width: 100%; overflow-x: auto; }
 
       #sentinel { height: 1px; }
 
@@ -179,6 +246,7 @@
       }
 
       function makeCard(note) {
+        const singleNoteView = hashNoteId() !== null;
         const card = document.createElement('article');
         card.className = 'card';
         card.id = String(note.id);
@@ -186,18 +254,40 @@
         card.style.backgroundColor = note.color;
         const content = document.createElement('div');
         content.className = 'card-content';
-        // This is generated locally from the Markdown source by export_notes.py.
-        content.innerHTML = note.html_content;
+        if (singleNoteView) {
+          // This is generated locally from the Markdown source by export_notes.py.
+          content.innerHTML = note.html_content;
+          card.append(content);
+        } else {
+          const title = document.createElement('h2');
+          title.className = 'card-title';
+          const titleLink = document.createElement('a');
+          titleLink.href = `./#${note.id}`;
+          titleLink.textContent = note.filename;
+          title.append(titleLink);
+          const preview = document.createElement('div');
+          preview.className = 'card-content card-preview';
+          // This is generated locally from the Markdown source by export_notes.py.
+          preview.innerHTML = note.html_content;
+          const readNote = document.createElement('a');
+          readNote.className = 'read-note';
+          readNote.href = `./#${note.id}`;
+          readNote.textContent = 'Read note →';
+          card.append(title, preview, readNote);
+        }
         const noteId = document.createElement('a');
         noteId.className = 'card-id';
         noteId.href = `./#${note.id}`;
-        noteId.textContent = `#${note.id}`;
+        const noteIcon = document.createElement('span');
+        noteIcon.className = 'card-id-icon';
+        noteIcon.setAttribute('aria-hidden', 'true');
+        noteIcon.textContent = '🗒️';
+        noteId.append(noteIcon, document.createTextNode(`#${note.id}`));
         noteId.setAttribute('aria-label', `View only note ${note.id}`);
         const updateDate = document.createElement('time');
         updateDate.className = 'card-date';
         updateDate.dateTime = note.update_date;
         updateDate.textContent = `Updated ${note.update_date.slice(0, 10)}`;
-        card.append(content);
         card.append(noteId);
         card.append(updateDate);
         return card;
