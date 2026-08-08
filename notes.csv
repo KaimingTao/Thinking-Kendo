@@ -1,17 +1,17 @@
 id,relative_path,stem_name,md_content,update_date
-1,Kendo Channels.md,Kendo Channels,"- 月刊剣道日本 付録動画
+1,./notes/Kendo Channels.md,Kendo Channels,"- 月刊剣道日本 付録動画
     - https://www.youtube.com/@月刊剣道日本付録動画
 - The way of the Namiashi Kendo, the Samurai Methods
     - https://www.youtube.com/@kendo_namiashi_dokkodo
 - 梶谷彪雅-剣道KENDO-
     - https://www.youtube.com/@-kendo-9265
-",2026-08-06T20:04:33-07:00
-2,Terminology/Terminology.md,Terminology,"## Terminology and their understanding
+",2026-05-07T22:18:43.371505-07:00
+2,./notes/Terminology/Terminology.md,Terminology,"## Terminology and their understanding
 
 - Kendo iroha
     - https://kenshi247.net/blog/2023/03/08/kendo-iroha/
-",2026-08-06T20:04:33-07:00
-3,Kendo store.md,Kendo store,"## Kendo equipment store
+",2026-05-07T22:18:43.371605-07:00
+3,./notes/Kendo store.md,Kendo store,"## Kendo equipment store
 
 - Maruyama Kendo supply
     - https://maruyamakendosupply.com/
@@ -56,9 +56,9 @@ id,relative_path,stem_name,md_content,update_date
 
 - Kendo Jidai's list
     - https://kendojidai.com/kendo-shop/
-",2026-08-06T20:04:33-07:00
-33,Ashisabaki/Ashisabaki.md,Ashisabaki,# 足捌き ashisabaki,2026-08-06T20:10:18-07:00
-34,BKKK/BKKK.md,BKKK,"
+",2026-08-06T19:57:51.497514-07:00
+33,./notes/Ashisabaki/Ashisabaki.md,Ashisabaki,# 足捌き ashisabaki,2026-05-21T18:23:47.011017-07:00
+34,./notes/BKKK/BKKK.md,BKKK,"
 ## Why we need to know the English and Japnease terms used in Kata and BKKK
 
 - for communication
@@ -193,9 +193,9 @@ id,relative_path,stem_name,md_content,update_date
 - 右胴　Migi-Do
 
 
-",2026-08-06T20:10:18-07:00
-6,Jodan/Jodan.md,Jodan,,2026-08-06T20:04:33-07:00
-35,Kata/Kata.md,Kata,"## Kata basic terms
+",2026-05-07T22:18:43.372108-07:00
+6,./notes/Jodan/Jodan.md,Jodan,,2026-05-07T22:18:43.372159-07:00
+35,./notes/Kata/Kata.md,Kata,"## Kata basic terms
 
 - 方剣道　Kata Kendo
 - 竹刀剣道　Shinai Kendo
@@ -368,9 +368,9 @@ id,relative_path,stem_name,md_content,update_date
 - すり込む　Suri-komu
 
 
-",2026-08-06T20:10:18-07:00
-8,Nito/Nito.md,Nito,,2026-08-06T20:04:33-07:00
-36,Warmup/Prepare.md,Prepare,"## Prepare Mindset
+",2026-05-07T22:18:43.372276-07:00
+8,./notes/Nito/Nito.md,Nito,,2026-05-07T22:18:43.372400-07:00
+36,./notes/Warmup/Prepare.md,Prepare,"## Prepare Mindset
 
 - Think about what we want to achieve today
 - `What things I learnt from previous practices?`
@@ -420,8 +420,8 @@ id,relative_path,stem_name,md_content,update_date
 
 
 
-",2026-08-06T20:10:18-07:00
-10,Safety check/Safety.md,Safety,"## Safety of practice
+",2026-05-07T22:18:43.372557-07:00
+10,./notes/Safety check/Safety.md,Safety,"## Safety of practice
 
 - We don't want to get injured
 - We don't want to injury our fellow practioners
@@ -480,8 +480,8 @@ id,relative_path,stem_name,md_content,update_date
 - Prevent concussion
 
 
-",2026-08-06T20:04:33-07:00
-11,Waza/Waza.md,Waza,"## Waza terms
+",2026-05-07T22:18:43.372657-07:00
+11,./notes/Waza/Waza.md,Waza,"## Waza terms
 
 - 表 Omote, mototachi no hidari
 - 里 Ura, mototachi no migi
@@ -596,8 +596,8 @@ From Omote or from Ura
 - Ai-Kote-Men
 - Do-uchiotoshi-Men
 - Men-Uchiotoshi-Men
-",2026-08-06T20:13:57-07:00
-37,Mind work/mind-training.md,mind-training,"## Training mindset
+",2026-08-06T20:12:17.014076-07:00
+37,./notes/Mind work/mind-training.md,mind-training,"## Training mindset
 
 The real voyage of discovery consists not in seeing new sights, but in looking with new eyes. (Marcel Proust)
 
@@ -674,8 +674,8 @@ The real voyage of discovery consists not in seeing new sights, but in looking w
 - enjoy and have fun
 
 
-",2026-08-06T20:10:18-07:00
-38,Suburi/素振り.md,素振り,"# 素振り
+",2026-05-07T22:18:43.372933-07:00
+38,./notes/Suburi/素振り.md,素振り,"# 素振り
 
 Suburi
 
@@ -686,8 +686,8 @@ Suburi
 - Sayu-men
 - Sayu-doh
 - Katate Suburi
-- Matawari",2026-08-06T20:10:18-07:00
-14,Record videos/video recording.md,video recording,"## What we're looking for in a video
+- Matawari",2026-05-31T12:57:49.010850-07:00
+14,./notes/Record videos/video recording.md,video recording,"## What we're looking for in a video
 
 - If the foot work is right
 - If the body work is right
@@ -825,8 +825,8 @@ Several factors help us to decide which method to choose:
 - the company may use your video to train their AI
 
 
-",2026-08-06T20:04:33-07:00
-39,Practice list/2025-10-01.md,2025-10-01,"## Practice content
+",2026-05-07T22:18:43.373107-07:00
+39,./notes/Practice list/2025-10-01.md,2025-10-01,"## Practice content
 
 - Warm up stretch
 - Shomen Suburi
@@ -838,23 +838,23 @@ Several factors help us to decide which method to choose:
 - Jumping Kikiraeshi
 - BKKK
 - Kata
-",2026-08-06T20:10:18-07:00
-16,Jodan/2026-05-07.md,2026-05-07,"
+",2026-05-21T18:27:28.034715-07:00
+16,./notes/Jodan/2026-05-07.md,2026-05-07,"
 - [【剣道出稽古】お互いに上段の構えで対決する！右上段VS左上段。横山剣道倶楽部](https://www.youtube.com/watch?v=DIvr62aoQ_w)
-",2026-08-06T20:04:33-07:00
-40,Kata/2026-05-07.md,2026-05-07,"
+",2026-05-07T22:18:43.375079-07:00
+40,./notes/Kata/2026-05-07.md,2026-05-07,"
 
 - [【分かりやすい！日本剣道形徹底解説】小太刀３本　サトッシー四段挑戦への道](https://www.youtube.com/watch?v=Us0z1ZEjVRI)
-",2026-08-06T20:10:18-07:00
-41,Mind work/See ourselves.md,See ourselves,"
+",2026-05-21T18:35:33.087604-07:00
+41,./notes/Mind work/See ourselves.md,See ourselves,"
 
 
 ## Pending question
 
 - how to record in first person view
 - how to catch the details or highlight the details efficiently, using AI?
-",2026-08-06T20:10:18-07:00
-42,BKKK/2026-05-21.md,2026-05-21,"## BKKK Related materials
+",2026-05-07T22:18:43.375256-07:00
+42,./notes/BKKK/2026-05-21.md,2026-05-21,"## BKKK Related materials
 
 - 木刀による剣道基本技稽古法
 	- In Japanese
@@ -880,8 +880,8 @@ Several factors help us to decide which method to choose:
 	- https://www.kingstonkendo.org/Kata.pdf
 	- https://www.kingstonkendo.org/news/news8.html
 	- From Kingston Kendo club
-",2026-08-06T20:10:18-07:00
-43,Kata/2026-05-21.md,2026-05-21,"
+",2026-05-21T18:34:46.165264-07:00
+43,./notes/Kata/2026-05-21.md,2026-05-21,"
 
 ## Kata Related literatures
 
@@ -902,22 +902,22 @@ Several factors help us to decide which method to choose:
 	- Nippon Kendo Kata (Japanese version)
 	- https://youtu.be/YkPkC_qcZF4?si=WD_xvTX3gHq3wDma
 - Nippon Kendo Kata (English)
-	- https://youtu.be/QIpPUdTCv-Y?si=l1KH9yncd-s0PH0i",2026-08-06T20:10:18-07:00
-21,日本刀/Katana names.md,Katana names,,2026-08-06T20:04:33-07:00
-44,Practice list/2026-05-21.md,2026-05-21,"## After practice
+	- https://youtu.be/QIpPUdTCv-Y?si=l1KH9yncd-s0PH0i",2026-05-21T18:25:46.493530-07:00
+21,./notes/日本刀/Katana names.md,Katana names,,2026-05-21T18:27:18.902495-07:00
+44,./notes/Practice list/2026-05-21.md,2026-05-21,"## After practice
 
 - Pack your Kendogu and Kote, keep then dry and clean
 - Fold your Gi and Hakama, wash them if you want
 - Wash and iron your Tenugui
 - Check Shinai & Bokutou are in good conditions
-- Check, think, and write down the **things learnt** today, for improving",2026-08-06T20:10:18-07:00
-23,Terminology/2026-05-21.md,2026-05-21,"## Why we need to know the English and Japnease terms used in Kata and BKKK
+- Check, think, and write down the **things learnt** today, for improving",2026-05-21T18:28:05.328099-07:00
+23,./notes/Terminology/2026-05-21.md,2026-05-21,"## Why we need to know the English and Japnease terms used in Kata and BKKK
 
 - for communication
 - for understanding the meaning behind each word
 - for practical usage, not for building a dictionary
-",2026-08-06T20:04:33-07:00
-45,BKKK/Terminology.md,Terminology,"
+",2026-05-21T18:28:34.859651-07:00
+45,./notes/BKKK/Terminology.md,Terminology,"
 - 木刀による剣道基本技稽古法 Bokuto-ni-yoru Kendo Kihon-waza Keiko-ho
 - 基本 Kihon
 - 技 Waza
@@ -1038,8 +1038,8 @@ Several factors help us to decide which method to choose:
 - 打ち落とし技 Uchi-otoshi-waza
 - 胴打ち落とし面 Do-uchiotoshi-men
 - 右胴 Migi-Do
-",2026-08-06T20:10:18-07:00
-46,Kata/Terminology.md,Terminology,"
+",2026-05-21T18:29:27.006131-07:00
+46,./notes/Kata/Terminology.md,Terminology,"
 ## Kata basic terms
 
 - 方剣道 Kata Kendo
@@ -1224,12 +1224,12 @@ Several factors help us to decide which method to choose:
 - すり流し Suri-nagashi
 - すり込む Suri-komu
 
-",2026-08-06T20:10:18-07:00
-26,Record videos/2026-05-21.md,2026-05-21,"pay attention to how feedback loop works
-",2026-08-06T20:04:33-07:00
-27,Ki Ken Tai no ichi/Ki Ken Tai no ichi.md,Ki Ken Tai no ichi,,2026-08-06T20:04:33-07:00
-28,Physics/Kendo physics.md,Kendo physics,,2026-08-06T20:04:33-07:00
-47,Suburi/Suburi factors.md,Suburi factors,"# Suburi factors
+",2026-05-21T18:29:49.429330-07:00
+26,./notes/Record videos/2026-05-21.md,2026-05-21,"pay attention to how feedback loop works
+",2026-05-21T18:32:58.608789-07:00
+27,./notes/Ki Ken Tai no ichi/Ki Ken Tai no ichi.md,Ki Ken Tai no ichi,,2026-05-21T18:36:24.134580-07:00
+28,./notes/Physics/Kendo physics.md,Kendo physics,,2026-05-21T18:37:01.501036-07:00
+47,./notes/Suburi/Suburi factors.md,Suburi factors,"# Suburi factors
 
 - Kamae
 - Grip
@@ -1238,28 +1238,28 @@ Several factors help us to decide which method to choose:
 - Kiri-otoshi
 - Ashisabaki
 - Taisabaki
-",2026-08-06T20:10:18-07:00
-30,日本刀/日本刀.md,日本刀,"## 日本刀の名前
+",2026-05-31T12:54:16.732225-07:00
+30,./notes/日本刀/日本刀.md,日本刀,"## 日本刀の名前
 
 鎺・鈨・はばき
-note: you cannot find the character in Mac's input keyboard tool",2026-08-06T20:16:53-07:00
-48,Learning method/Understanding.md,Understanding,"check what is known
+note: you cannot find the character in Mac's input keyboard tool",2026-08-06T20:16:47.446519-07:00
+48,./notes/Learning method/Understanding.md,Understanding,"check what is known
 check what is unknown
-Understand self",2026-08-06T20:10:18-07:00
-49,Learning method/Flexibility.md,Flexibility,,2026-08-06T20:10:18-07:00
-50,Waza/引き技.md,引き技,"## 引き技
+Understand self",2026-05-31T13:12:19.837564-07:00
+49,./notes/Learning method/Flexibility.md,Flexibility,,2026-05-31T13:12:28.707654-07:00
+50,./notes/Waza/引き技.md,引き技,"## 引き技
 
 English: Hiki waza
 
 - HIKI-Men
 - HIKI-Kote
-- HIKI-Do",2026-08-06T20:15:15-07:00
-51,Todo/2026-08-07.md,2026-08-07,"# To do
+- HIKI-Do",2026-08-06T20:14:34.675001-07:00
+51,./notes/Todo/2026-08-07.md,2026-08-07,"# To do
 
 - Add a per-card ""Share as image"" action for social media, with a copy-link option.
 - Add a social-media sharing feature that generates a fixed-size single-image preview with a title, short excerpt, and link to the full note.
 ",2026-08-07T17:14:45-07:00
-52,素振り/2026-08-07.md,2026-08-07,"# 57 Detailed Factors for a Proper Strike
+52,./notes/素振り/2026-08-07.md,2026-08-07,"# 57 Detailed Factors for a Proper Strike
 
 What happens in 1 tempo.
 
@@ -1378,4 +1378,4 @@ What happens in 1 tempo.
 
 ----
 
-TODO: using other medias to express them.",2026-08-07T20:41:50-07:00
+TODO: using other medias to express them.",2026-08-07T20:33:41.269577-07:00

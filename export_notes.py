@@ -16,6 +16,8 @@ ROOT = Path(__file__).resolve().parent
 CSV_OUTPUT = ROOT / "notes.csv"
 JSON_OUTPUT = ROOT / "notes.json"
 EXCLUDED_DIRECTORIES = {".git", ".venv", "__pycache__"}
+NOTES_PATH_PREFIX = "./notes/"
+SOURCE_NOTES_PREFIX = "notes/"
 RAW_URL_PATTERN = re.compile(r"(?<!\]\()(https?://[^\s<>\"\]]+)")
 PROTECTED_MARKDOWN_PATTERN = re.compile(
     r"(```[\s\S]*?```|`[^`]*`|!?\[[^\]]*\]\([^\n)]*\))"
@@ -107,7 +109,10 @@ def existing_ids() -> tuple[dict[str, int], int]:
                 relative_path = row["relative_path"]
             except (KeyError, TypeError, ValueError):
                 continue
-            ids_by_path[relative_path] = note_id
+            source_path = relative_path.removeprefix(NOTES_PATH_PREFIX).removeprefix(
+                SOURCE_NOTES_PREFIX
+            )
+            ids_by_path[source_path] = note_id
             maximum_id = max(maximum_id, note_id)
     return ids_by_path, maximum_id
 
@@ -128,7 +133,8 @@ def write_csv() -> int:
         key=lambda item: getattr(item.stat(), "st_birthtime", item.stat().st_mtime),
     ):
         relative_path = path.relative_to(ROOT).as_posix()
-        note_id = ids_by_path.get(relative_path)
+        note_path = relative_path.removeprefix(SOURCE_NOTES_PREFIX)
+        note_id = ids_by_path.get(note_path)
         if note_id is None:
             maximum_id += 1
             note_id = maximum_id
@@ -136,7 +142,7 @@ def write_csv() -> int:
         rows.append(
             {
                 "id": note_id,
-                "relative_path": relative_path,
+                "relative_path": f"{NOTES_PATH_PREFIX}{note_path}",
                 "stem_name": path.stem,
                 "md_content": content,
                 "update_date": update_date(path),
