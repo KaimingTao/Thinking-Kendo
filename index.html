@@ -27,7 +27,14 @@
       h1 a { color: inherit; text-decoration: none; }
       h1 a:hover { text-decoration: underline; }
 
+      .search-controls {
+        display: flex;
+        gap: 0.75rem;
+      }
+
       #search {
+        flex: 1;
+        min-width: 0;
         width: 100%;
         padding: 0.85rem 1rem;
         border: 1px solid #c8cdd2;
@@ -43,6 +50,19 @@
         border-color: #3578d4;
       }
 
+      #sort {
+        padding: 0.85rem 1rem;
+        border: 1px solid #c8cdd2;
+        border-radius: 0.65rem;
+        background: #fff;
+        color: #243b53;
+        cursor: pointer;
+        font: inherit;
+        box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
+      }
+      #sort:hover { background: #edf3fb; }
+      #sort:focus-visible { outline: 3px solid #a7c7ff; border-color: #3578d4; }
+
       #status { min-height: 1.5rem; margin: 0.8rem 0 1rem; color: #5b636c; }
 
       #cards {
@@ -57,7 +77,7 @@
         width: 100%;
         margin: 0 0 1rem;
         break-inside: avoid;
-        padding: 2.25rem 1.1rem 1.1rem;
+        padding: 2.25rem 1.1rem 2.1rem;
         border: 1px solid #d9dde1;
         border-radius: 0.75rem;
         background: #fff;
@@ -103,6 +123,14 @@
       }
       .card-id:hover { background: #d9aec4; color: #5d1f3c; text-decoration: underline; }
 
+      .card-date {
+        position: absolute;
+        right: 1.1rem;
+        bottom: 0.7rem;
+        color: #667085;
+        font-size: 0.72rem;
+      }
+
       #cards.single-card { column-count: 1; }
 
       #sentinel { height: 1px; }
@@ -114,13 +142,17 @@
       @media (max-width: 600px) {
         main { padding: 1rem; }
         #cards { column-count: 1; }
+        .search-controls { gap: 0.5rem; }
       }
     </style>
   </head>
   <body>
     <main>
       <h1><a href="./">Thinking-Kendo</a></h1>
-      <input id="search" type="search" placeholder="Search all notes…" autocomplete="off" />
+      <div class="search-controls">
+        <input id="search" type="search" placeholder="Search all notes…" autocomplete="off" />
+        <button id="sort" type="button">sort</button>
+      </div>
       <p id="status" aria-live="polite">Loading notes…</p>
       <section id="cards" aria-label="Notes"></section>
       <div id="sentinel" aria-hidden="true"></div>
@@ -129,22 +161,14 @@
     <script>
       const PAGE_SIZE = 24;
       const search = document.querySelector('#search');
+      const sort = document.querySelector('#sort');
       const status = document.querySelector('#status');
       const cards = document.querySelector('#cards');
       const sentinel = document.querySelector('#sentinel');
       let notes = [];
       let results = [];
       let visibleCount = 0;
-      const CARD_COLORS = [
-        '#e1eaf5', // blue gray
-        '#dfeee6', // sage gray
-        '#f5e5d8', // warm sand
-        '#f1dfe6', // rose gray
-        '#e7e0f2', // lavender gray
-        '#f2ebcb', // soft yellow
-        '#dcecef', // teal gray
-      ];
-
+      let sortedByUpdateDate = false;
       function shuffled(items) {
         const copy = [...items];
         for (let index = copy.length - 1; index > 0; index -= 1) {
@@ -159,7 +183,7 @@
         card.className = 'card';
         card.id = String(note.id);
         card.setAttribute('aria-label', note.filename);
-        card.style.backgroundColor = CARD_COLORS[Math.floor(Math.random() * CARD_COLORS.length)];
+        card.style.backgroundColor = note.color;
         const content = document.createElement('div');
         content.className = 'card-content';
         // This is generated locally from the Markdown source by export_notes.py.
@@ -169,14 +193,25 @@
         noteId.href = `./#${note.id}`;
         noteId.textContent = `#${note.id}`;
         noteId.setAttribute('aria-label', `View only note ${note.id}`);
+        const updateDate = document.createElement('time');
+        updateDate.className = 'card-date';
+        updateDate.dateTime = note.update_date;
+        updateDate.textContent = `Updated ${note.update_date.slice(0, 10)}`;
         card.append(content);
         card.append(noteId);
+        card.append(updateDate);
         return card;
       }
 
       function hashNoteId() {
         const match = location.hash.match(/^#(\d+)$/);
         return match ? Number(match[1]) : null;
+      }
+
+      function newestFirst(items) {
+        return [...items].sort((first, second) =>
+          Date.parse(second.update_date) - Date.parse(first.update_date)
+        );
       }
 
       function render(reset = false) {
@@ -204,11 +239,16 @@
             Object.values(note).some((value) => String(value).toLocaleLowerCase().includes(query))
           ))
           : contentNotes.filter((note) => note.id === noteId);
+        if (sortedByUpdateDate && noteId === null) results = newestFirst(results);
         cards.classList.toggle('single-card', noteId !== null && results.length === 1);
         render(true);
       }
 
       search.addEventListener('input', filterNotes);
+      sort.addEventListener('click', () => {
+        sortedByUpdateDate = true;
+        filterNotes();
+      });
       window.addEventListener('hashchange', filterNotes);
 
       new IntersectionObserver(([entry]) => {
@@ -218,7 +258,7 @@
         }
       }, { rootMargin: '500px' }).observe(sentinel);
 
-      fetch('./notes.json')
+      fetch('./notes.json', { cache: 'no-store' })
         .then((response) => {
           if (!response.ok) throw new Error('Could not load notes.json');
           return response.json();

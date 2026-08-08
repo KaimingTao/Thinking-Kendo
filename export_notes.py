@@ -20,6 +20,15 @@ RAW_URL_PATTERN = re.compile(r"(?<!\]\()(https?://[^\s<>\"\]]+)")
 PROTECTED_MARKDOWN_PATTERN = re.compile(
     r"(```[\s\S]*?```|`[^`]*`|!?\[[^\]]*\]\([^\n)]*\))"
 )
+CARD_COLORS = [
+    "#e1eaf5",  # blue gray
+    "#dfeee6",  # sage gray
+    "#f5e5d8",  # warm sand
+    "#f1dfe6",  # rose gray
+    "#e7e0f2",  # lavender gray
+    "#f2ebcb",  # soft yellow
+    "#dcecef",  # teal gray
+]
 
 
 def is_included_markdown(path: Path) -> bool:
@@ -77,6 +86,11 @@ def markdown_to_html(content: str) -> str:
     """Convert a note's Markdown to HTML suitable for the local notes page."""
     prepared_content = linkify_bare_urls(content)
     return markdown.markdown(prepared_content, extensions=["extra", "sane_lists", "nl2br"])
+
+
+def card_color(note_id: int) -> str:
+    """Return a stable card color based on the note ID."""
+    return CARD_COLORS[(note_id - 1) % len(CARD_COLORS)]
 
 
 def existing_ids() -> tuple[dict[str, int], int]:
@@ -148,6 +162,7 @@ def write_json_from_csv() -> int:
     notes = [
         {
             "id": int(row["id"]),
+            "color": card_color(int(row["id"])),
             "relative_path": row["relative_path"],
             "filename": row["stem_name"],
             "content": row["md_content"],
